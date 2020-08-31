@@ -1,0 +1,859 @@
+
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+
+#controls-result .section1 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: lightpink;
+	color: black;
+	border: 8px dotted red;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#controls-result ul {
+	color: darkblue;
+	font-size: 16px;
+}
+
+#controls-result blockquote {
+	color: CornflowerBlue;
+	font-size: 24px
+}
+
+#controls-result em {
+	font-size: 16px
+}
+
+#controls-result h1 {
+	color: gold;
+	position: absolute;
+	bottom: 10%;
+	text-decoration: underline;
+	font-style: oblique;
+	;
+}
+
+
+
+#controls-result .change {
+	border: 5px dashed green;
+	color: yellow;
+	background-color: black;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+
+
+#controls-result .section2 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: #89FC00;
+	color: black;
+	border: 8px dotted #DC0073;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+#its-ok {
+	border: 5px groove #F5B700;
+	border-radius: 5px;
+}
+
+#controls-result .security {
+	display: block;
+	border: 1px solid blue;
+	border-radius: 5px;
+	transform: rotate(15deg);
+	color: purple;
+}
+
+#controls-result h1 {
+	font-family: cursive;
+}
+
+#controls-result blockquote {
+	background-color: black;
+	font-family: helvetica;
+	color: yellow;
+}
+
+#controls-result span {
+	display: inline-block;
+	padding-left: 50px;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+
+
+#controls-result .section16 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: pink;
+	color: black;
+	border: 8px dotted red;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#controls-result .i-am-here {
+	font-size: 23px;
+	color: darkblue;
+	border: 5px dotted purple;
+}
+
+#controls-result .remember {
+	border: 2px dotted blue;
+}
+
+#controls-result em {
+	display: block;
+	color: red;
+	font-size: 40px;
+	position: absolute;
+	top: 60%;
+	right: 5%;
+	left: auto;
+	transform: rotate(30deg);
+}
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+
+
+#controls-result .section3 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: mediumspringgreen;
+	color: darkslategrey;
+	border: 8px dotted bisque;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+#overcome {
+	border: 5px dashed orange;
+	padding: 10px;
+	background-color: linen;
+	font-style: darkgreen;
+}
+
+#controls-result em {
+	display: block;
+	color: coral;
+	font-size: 20px;
+	position: relative;
+	top: 20%;
+	right: 3%;
+	left: auto;
+	text-align: right;
+	transform: rotate(10deg);
+}
+
+#controls-result blockquote {
+	font-family: sans-serif;
+	font-style: oblique;
+	font-size: 3rem;
+	font-weight: 700;
+	color: slateblue;
+}
+
+#controls-result span {
+	color: hotpink;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+
+
+#controls-result .section4 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: sans-serif;
+	background-color: #076D54;
+	color: black;
+	border: 8px dotted red;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#controls-result li {
+	font-family: monospace;
+	line-height: 115%;
+	color: white;
+}
+
+#controls-result h1 {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	color: pink;
+	font-family: "Univers";
+}
+
+#controls-result blockquote {
+	font-size: 20px;
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	font-family: serif;
+}
+
+
+
+#rosewater-dreams {
+	/* //background-image: linear-gradient(to black, white) */
+	border: 50px dotted yellow;
+	padding: 100px;
+	animation: mymove 5s infinite;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+
+
+#controls-result .section5 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: wheat;
+	color: black;
+	border: 8px dotted royalblue;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#controls-result .tender-me {
+	font-size: 16px;
+	color: magenta;
+}
+
+
+
+#a-question-and-an-answer {
+	border: 10px dotted purple;
+	background-color: green;
+}
+
+#controls-result em {
+	display: block;
+	color: green;
+	position: absolute;
+	text-align: left;
+	font-size: 20px;
+	bottom: 3%;
+	left: 10%;
+}
+
+#controls-result h1 {
+	font-family: courier new;
+	color: blue;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+
+
+
+
+#controls-result .section6 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: black;
+	color: green;
+	border: 8px dotted gold;
+	padding: 5px;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#oracle {
+	font-size: 40px;
+	color: white;
+	border: 10px double purple;
+	padding: 20px;
+}
+
+#controls-result em {
+	font-family: helvetica;
+	color: white;
+	position: absolute;
+	right: 20%;
+	transform: rotate(340deg);
+}
+
+#controls-result h1 {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: red;
+}
+
+#controls-result blockquote {
+	color: #FDE8E9;
+	background-color: #596475;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	padding: 50px;
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+#controls-result .section7 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+	color: black;
+	border: 8px dashed black;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+#controls-result .any-class-name {
+	text-decoration: underline;
+	border: 10px dotted yellow;
+	padding: 2rem;
+	margin: 0 25%;
+	text-align: center;
+	background-color: gold;
+}
+
+#controls-result .purple {
+	display: block;
+	color: purple;
+	background-color: pink;
+	opacity: 0.7;
+	text-align: center;
+	border-radius: 20px;
+	padding: 5px;
+}
+
+#controls-result .quote {
+	font-family: monospace;
+}
+
+#controls-result h1 {
+	position: absolute;
+	bottom: 0;
+	color: lightyellow;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+#controls-result .section8 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: hotpink;
+	color: black;
+	border: 8px dotted red;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+#controls-result .any-class-name-i-want {
+	border: 3px groove blue;
+	color: green;
+}
+
+#controls-result em {
+	position: absolute;
+	text-align: center;
+	background-image: radial-gradient(white, yellow);
+	max-width: 400px;
+	padding: 5px;
+}
+
+#controls-result h1 {
+	color: #c6d8d3;
+	position: absolute;
+	bottom: 0;
+	background-color: #331832;
+}
+
+#controls-result blockquote {
+	position: absolute;
+	bottom: 60px;
+}
+
+
+/*  */
+/*  */
+/*  */
+
+#controls-result .section9 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: purple;
+	color: white;
+	border: 8px dotted lightblue;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#controls-result .tears-in-the-typing-pool {
+	font-family: "Arial";
+}
+
+#is-this-a-broadcast-song {
+	border: 1px solid white;
+	padding: 1rem;
+	border-radius: 25%;
+}
+
+
+
+#controls-result h1 {
+	font-family: sans-serif;
+	font-size: 60px;
+	border: 10px double pink
+}
+
+#controls-result .tears-in-the-typing-pool {
+	border: 0.2px dashed limegreen;
+	color: brown;
+	font-family: monospace;
+	background-color: lightyellow;
+	padding: 15px;
+}
+
+#controls-result em {
+	display: block;
+	font-size: 35px;
+	color: yellow;
+	padding-left: 38px;
+	position: absolute;
+	top: 25%;
+	left: auto;
+	text-align: right;
+	transform: rotate(35deg);
+}
+
+#controls-result .semiTransparent {
+	opacity: 0.4;
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+#controls-result .section10 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: greenyellow;
+	color: black;
+	border: 8px dotted red;
+}
+
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+
+#moving {
+	border: 10px solid red;
+	background-color: white;
+	padding: 10px
+}
+
+#list {
+	color: #C2BBF0;
+	text-shadow: 3px 2px #F1E3F3;
+}
+
+#controls-result em {
+	display: block;
+	color: white;
+	font-size: 15 px;
+	position: absolute;
+	top: 10%;
+	right: 3%;
+	left: auto;
+	text-align: right;
+}
+#controls-result blockquote {
+	transform: rotate(-20deg);
+	border: 5px solid red;
+}
+
+/*  */
+/*  */
+/*  */
+#controls-result .section11 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: black;
+	color: violet;
+	border: 8px dotted red;
+}
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+#controls-result em {
+	display: block;
+	color: green;
+	font-size: 20px;
+	position: absolute;
+	top: 90%;
+	transform: rotate(43deg);
+}
+#controls-result blockquote {
+	color: blue;
+	font-size: 30px;
+}
+#pageTitle {
+	font-size: 32px;
+}
+
+#how-2-look {
+	color: purple;
+	font-family: Arial, fantasy;
+}
+
+/*  */
+/*  */
+/*  */
+#controls-result .section12 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: #d0fed5;
+	color: black;
+	border: 8px dotted #b19cd9;
+}
+#controls-result h1 {
+	color: lime;
+	font-size: 40px;
+	position: absolute;
+	transform: rotate(-10deg)
+}
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#my-id {
+	border: 10px dotted lime;
+	background-color: white;
+	padding: 50px;
+}
+#controls-result li {
+	color: #b19cd9;
+}
+#controls-result ul {
+	background: white;
+}
+#controls-result em {
+	display: block;
+	color: pink;
+	font-size: 20px;
+	position: absolute;
+	top: 10%;
+	right: 3%;
+	left: auto;
+	text-align: right;
+	transform: rotate(45deg);
+}
+#controls-result blockquote {
+	border: 2px dashed black;
+	background-color: #b19cd9;
+	padding: 20px;
+	font-family: papyrus;
+	font-size: 20px
+}
+
+/*  */
+/*  */
+/*  */
+#controls-result .section13 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: helvetica;
+	background-color: white;
+	color: pink;
+}
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#controls-result em {
+	font-size: 14px;
+	color: blue;
+}
+#controls-result .gradient {
+	background-image: linear-gradient(yellow, pink);
+	padding: 20px;
+	border: 5px dashed;
+}
+
+/*  */
+/*  */
+/*  */
+#controls-result h1 {
+	font-family: helvetica;
+	position: absolute;
+	bottom: 0;
+	color: lightpink;
+}
+#controls-result .section14 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: hotpink;
+	color: black;
+	border: 10px dotted gold;
+}
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+
+#velociraptor {
+	background-image: radial-gradient(white, lightpink);
+	border: 10px dotted white;
+	max-width: 500px;
+	margin: 0px auto;
+	padding: 20px;
+	font-family: helvetica;
+}
+#controls-result em {
+	font-family: sans-serif;
+	color: gold;
+	position: absolute;
+	top: 60%;
+	right: 30%;
+	left: 45%;
+	display: block;
+	transform: rotate(20deg);
+}
+#controls-result #controls-result blockquote {
+	position: absolute;
+	bottom: 40px;
+}
+
+/*  */
+/*  */
+/*  */
+#controls-result .section15 {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	font-family: monospace;
+	background-color: highlightgreen;
+	color: black;
+	border: 8px dotted red;
+}
+#controls-result .handcoding-is-fun {
+	height: 100vh;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 10px;
+	-webkit-overflow-scrolling: touch;
+}
+#controls-result h1 {
+	color: CornflowerBlue
+}
+#controls-result em {
+	display: block;
+	color: orange;
+	font-size: 12px;
+	position: absolute;
+	top: 80%;
+	text-align: center;
+}
+#controls-result blockquote {
+	color: darkblue;
+	font-family: helvetica;
+	font-size:30px;
+}
+
+#controls-result .trees-of-tomorrow {
+	border: 5px dotted green;
+	color: blue;
+	background-color: lightblue;
+	padding: 30px;
+}
+
+/*  */
+/*  */
+/*  */

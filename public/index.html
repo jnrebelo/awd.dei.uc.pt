@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="apple-touch-icon" href="icon.png" />
+  <!-- <link rel="stylesheet" href="stylesheets/random_styles.css" /> -->
+
+  <link rel="stylesheet" href="stylesheets/normalize.css" />
+  <link rel="stylesheet" href="stylesheets/main.css" />
+
+  <link rel="stylesheet" href="stylesheets/style.css" />
+
+</head>
+
+<body>
+  <!--  -->
+  <div id="emojiSection"></div>
+  <!--  -->
+
+  <div class="header_interface">
+    <div class="block title">
+      <h1>Algorithmic Design of <br> Web Pages</h1>
+    </div>
+    <div class="block inputs">
+      <input type="text" id="text1" value="" placeholder="Search Term" />
+      <button type="submit" id="btn" value="search" >Search</button>
+      <button type="submit" id="btn_analize" value="analize">Analize</button>
+    </div>
+    <div class="block edit_content">
+      <button type="button" id="toggle_contenteditable" value="Make Content Editable" />Make Content Editable</button>
+      <!-- <button type="button" id="validate_edit" value="Apply Edit" />Apply Edit</button> -->
+    </div>
+    <div class="block font_parameters">
+      <button type="button" id="show_controls" value="Controls" />Controls</button>
+
+    </div>
+    <div class="block">
+      <button type="button" id="b_info" value="Info" />Info</button>
+      <button type="button" id="b_gallery" value="Gallery" />Gallery</button>
+      <!-- <button type="button" id="b_theme" value="UI Theme" />UI Theme</button> --> 
+    </div>
+  </div>
+
+  <div class="blockfull">
+    <div class="controls">
+      <ul class="">
+        <li>
+          <button type="button" id="toggle_contenteditable" value="Make Styles Editable">Make Styles Editable</button>
+          <button type="button" id="validate_edit" value="Apply Edit">Apply Edit</button>
+        </li>
+        <!--  -->
+        <li id="cust-textcolor">
+          <div class="ccs-row">
+            <span class="css">Text Color</span>
+            <br>
+            <div class="settings-part-right" style="position: relative">
+              <input type="input" class="form-appearance-textcolor settings-textinput" name="form-textcolor" value="#000000" />
+              <button type="button" class="settings-togglecolorpicker settings-togglecolorpicker-text" style="background: rgb(181, 31, 111);"></button>
+            </div>
+          </div>
+        </li>
+        <li id="cust-bgcolor">
+          <div class="ccs-row">
+            <span class="css">Background Color</span>
+            <br>
+            <div class="settings-part-right" style="position: relative">
+              <input type="input" class="form-appearance-bgcolor settings-textinput" name="form-bgcolor" value="#ffffff" />
+              <button type="button" class="settings-togglecolorpicker settings-togglecolorpicker-bg" style="background: rgb(255, 0, 0);"></button>
+            </div>
+          </div>
+        </li>
+        <!--  -->
+        <li id="font-size">
+          <div class="css">
+            <span class="property">font-size:</span>
+            <span id="fontSizeResult">16pt</span><span>;</span>
+          </div>
+          <div class="inputs">
+            <input id="fontSizeSlider" min="1" max="40" step="0.5" value="16" type="range" />
+          </div>
+        </li>
+        <!--  -->
+
+        <li id="font_props">
+          <div class="ccs-row">
+            <span class="css">"MONO"
+              <span class="result" id="monoResult">0.36</span>;
+              <br>
+              <span class="inputs">
+                <input id="monoSlider" min="0" max="1" value="0" step="0.01" type="range" />
+              </span>
+
+          </div>
+        </li>
+        <li id="cust-casl">
+          <div class="ccs-row">
+            <span class="css">"CASL"
+              <span id="caslResult" class="result">0</span>;
+            </span>
+            <br>
+            <span class="inputs">
+              <input id="caslSlider" min="0" max="1" value="0" step="0.01" type="range" />
+            </span>
+
+          </div>
+        </li>
+        <li id="font-weight">
+          <div class="ccs-row">
+            <span class="css">"wght"
+              <span id="wghtResult" class="result">300</span>;
+            </span>
+            <br>
+            <span class="inputs">
+              <input id="wghtSlider" min="300" max="1000" value="300" type="range" />
+            </span>
+
+          </div>
+        </li>
+        <li id="cust-slnt">
+          <div class="ccs-row">
+            <span class="css">"slnt"
+              <span id="slntResult" class="result">0</span>;
+            </span>
+            <br>
+            <span class="inputs">
+              <input id="slntSlider" min="-15" max="0" step=".1" value="0" type="range" />
+            </span>
+
+          </div>
+        </li>
+
+
+      </ul>
+      <!-- color picker -->
+      <div id="textcolorpicker" class="form-colorpicker"></div>
+      <div id="bgcolorpicker" class="form-colorpicker"></div>
+      <!--  -->
+    </div>
+  </div>
+
+  <div class="info_section">
+    <div class="block title">
+      <h1>About</h1>
+    </div>
+    <div class="block inputs">
+      <p>AWD is a data-driven algorithmic system that automatically generates different web pages with automatic styles and
+        content.
+      </p>
+    </div>
+    <div class="block edit_content">
+      <p>The styles and contents of the website generated are defined based on an initial user search and the results obtained
+        are analyzed semantically in order to define the visual characteristics of the result.</p>
+    </div>
+    <div class="block font_parameters">
+      <p>Developed by José Rebelo (2020) at CISUC as part of the master's degree final project in Multimedia Design, University
+        of Coimbra, Portugal.</p>
+      </p>
+    </div>
+    <div class="block">
+    </div>
+  </div>
+
+  <div class="gallery_section">
+    <div class="images_wrap">
+      <ul>
+        <li>
+          <img src="https://media.giphy.com/media/YREOEkj50amRdtRnf8/giphy.gif" alt="">
+        </li>
+        <li>
+          <img src="https://media.giphy.com/media/W4owNlWp35JE0xaWtE/giphy.gif" alt="">
+        </li>
+        <li>
+          <img src="https://media.giphy.com/media/L3nzug1PBLZo2SAZb4/giphy.gif" alt="">
+        </li>
+        <li>
+          <img src="https://media.giphy.com/media/YREOEkj50amRdtRnf8/giphy.gif" alt="">
+        </li>
+        <li>
+          <img src="https://media.giphy.com/media/W4owNlWp35JE0xaWtE/giphy.gif" alt="">
+        </li>
+        <li>
+          <img src="https://media.giphy.com/media/L3nzug1PBLZo2SAZb4/giphy.gif" alt="">
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+  <section id="controls-result" class="page">
+    <div class="title">
+      <!-- search results go here-->
+    </div>
+
+    <div class="summary">
+      <!-- search results go here-->
+    </div>
+
+    <div id="results" class="results">
+      <!-- search results go here-->
+    </div>
+  </section>
+
+
+
+
+  <!--  -->
+  <!-- JS -->
+
+  <script src="javascripts/vendor/iro.min.js"></script>
+  <script src="javascripts/vendor/jquery-3.2.1.min.js"></script>
+  <script src="javascripts/lib/blotter.js"></script>
+  <script src="javascripts/lib/liquidDistortMaterial.js"></script>
+
+  <script src="javascripts/main.js"></script>
+</body>
+
+</html>

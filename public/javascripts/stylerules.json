@@ -1,0 +1,71 @@
+{
+    "body": [
+        {
+            "id": "default_one",
+            "text_length": "small_text",
+            "height": "parameter",
+            "width": "parameter",
+            "font": "parameter",
+            "text_color": "parameter",
+            "background_color": "parameter"
+        },
+        {
+            "id": "default_two",
+            "text_length": "medium_text",
+            "height": "parameter",
+            "width": "parameter",
+            "font": "parameter",
+            "text_color": "parameter",
+            "background_color": "parameter"
+        },
+        {
+            "id": "default_three",
+            "text_length": "large_text",
+            "height": "parameter",
+            "width": "parameter",
+            "font": "parameter",
+            "text_color": "parameter",
+            "background_color": "parameter"
+        }
+    ],
+    "#controls-result": [
+        {
+            "id": "default_one",
+            "text_length": "small_text",
+            "height": "parameter",
+            "width": "parameter",
+            "font": "parameter",
+            "text_color": "parameter",
+            "background_color": "parameter"
+        },
+        {
+            "id": "default_three",
+            "text_length": "large_text",
+            "height": "parameter",
+            "width": "parameter",
+            "font": "parameter",
+            "text_color": "parameter",
+            "background_color": "parameter"
+        }
+    ],
+    "#results": [
+        {
+            "id": "default_one",
+            "text_length": "small_text",
+            "height": "parameter",
+            "width": "parameter",
+            "font": "parameter",
+            "text_color": "parameter",
+            "background_color": "parameter"
+        },
+        {
+            "id": "default_three",
+            "text_length": "large_text",
+            "height": "parameter",
+            "width": "parameter",
+            "font": "parameter",
+            "text_color": "parameter",
+            "background_color": "parameter"
+        }
+    ]
+}

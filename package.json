@@ -1,0 +1,23 @@
+{
+  "name": "api-merge",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "apos-to-lex-form": "^1.0.5",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "natural": "^1.0.2",
+    "node-nlp": "^4.3.0",
+    "nodemon": "^2.0.3",
+    "spelling-corrector": "^3.0.0",
+    "stopword": "^1.0.1",
+    "wordnet-db": "^3.1.14"
+  }
+}
