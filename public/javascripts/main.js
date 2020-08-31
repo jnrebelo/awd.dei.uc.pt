@@ -177,7 +177,7 @@ const submitReview = e => {
   };
 
   try {
-    const f = fetch("http://localhost:9000/post", options)
+    const f = fetch("http://awd3.dei.uc.pt/server/post", options)
       .then(function(res) {
         return res.json();
       })
@@ -550,7 +550,6 @@ function getJsonStyles(res) {
    */
   //
   function _styleWordHits() {
-
     // get text from html
     let textResult = document.getElementById("results").innerHTML;
 
