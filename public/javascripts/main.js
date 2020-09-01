@@ -177,7 +177,7 @@ const submitReview = e => {
   };
 
   try {
-    const f = fetch("http://localhost:9000/post", options)
+    const f = fetch("http://awd3.dei.uc.pt/post", options)
       .then(function(res) {
         return res.json();
       })
