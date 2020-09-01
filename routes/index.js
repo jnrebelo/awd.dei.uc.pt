@@ -1,9 +1,9 @@
-const express = require('express');
-const aposToLexForm = require('apos-to-lex-form');
-const natural = require('natural');
-const SpellCorrector = require('spelling-corrector');
-const SW = require('stopword');
-const lexicon = require('../public/assets/lexicon');
+const express = require("express");
+const aposToLexForm = require("apos-to-lex-form");
+const natural = require("natural");
+const SpellCorrector = require("spelling-corrector");
+const SW = require("stopword");
+const lexicon = require("../public/assets/lexicon");
 
 const spellCorrector = new SpellCorrector();
 spellCorrector.loadDictionary();
@@ -11,14 +11,13 @@ spellCorrector.loadDictionary();
 const { SentimentAnalyzer } = require("node-nlp");
 const sentiment = new SentimentAnalyzer({ language: "en" });
 
-const cors = require('cors');
+// const cors = require("cors");
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ extended: true, limit: '50mb' }))
-
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 // app.get('/get/:anything', function (req, res) {
 //   var hw = {};
@@ -27,15 +26,12 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }))
 //   res.send(hw);
 // });
 
-app.get('/', function (req, res) {
+app.get("/", function(req, res) {
   res.send("API listening");
 });
 
-
-app.post('/post', function (req, res) {
-
+app.post("/post", function(req, res) {
   //let store_WordHits = [];
-
 
   const content = req.body.content;
   //console.log("CONTENT:____ " + content);
@@ -55,11 +51,13 @@ app.post('/post', function (req, res) {
   //console.log("TREATEDColours:_ " + '\n' + JSON.stringify(treatedColours) + '\n');
 
   const treatedEmotions = _treatEmotionData(wordNet);
-  console.log("TREATEDEmotions:_ " + '\n' + JSON.stringify(treatedEmotions) + '\n');
-
+  console.log(
+    "TREATEDEmotions:_ " + "\n" + JSON.stringify(treatedEmotions) + "\n"
+  );
 
   const preparedData = _prepareData(cleanedData);
-  const sentimentAn = sentiment.getSentiment(preparedData)
+  const sentimentAn = sentiment
+    .getSentiment(preparedData)
     .then(result => {
       let store_GetSentiment = {};
       store_GetSentiment = result;
@@ -69,14 +67,14 @@ app.post('/post', function (req, res) {
       store_GetSentiment.emotions = treatedEmotions;
 
       return store_GetSentiment;
-    }).then(store_GetSentiment => {
+    })
+    .then(store_GetSentiment => {
       //console.log(store_GetSentiment);
       res.send(JSON.stringify(store_GetSentiment));
-    }).catch(err => {
+    })
+    .catch(err => {
       console.error(err.message);
     });
-
-
 
   // sentiment.getSentiment(preparedData)
   //   .then(result => {
@@ -86,24 +84,21 @@ app.post('/post', function (req, res) {
   //     console.error(err.message);
   //     res.send(JSON.stringify({ "error": err.message }));
   //   });
-
 });
-
 
 /**
  * prepate data
  * @param data
  * @returns {*}
  * @private
- * @depends     
- * 
- * TODO 
+ * @depends
+ *
+ * TODO
  *  - Separate each formart param
  *  - Get more control
  *  - Sen words array tou Front for graphical usage
  */
 function _prepareData(data) {
-
   // Convert contractions to standard lexicon (I’m, you’re) to (I am, you are)
   const lexedContent = aposToLexForm(data);
 
@@ -111,7 +106,7 @@ function _prepareData(data) {
   const casedContent = lexedContent.toLowerCase();
 
   // Remove non-alphabetical and special characters
-  const alphaOnlyContent = casedContent.replace(/[^a-zA-Z\s]+/g, '');
+  const alphaOnlyContent = casedContent.replace(/[^a-zA-Z\s]+/g, "");
 
   // Tokenize words
   const { WordTokenizer } = natural;
@@ -139,11 +134,10 @@ function _prepareData(data) {
  * @param data
  * @returns {*}
  * @private
- * @depends     
- * 
+ * @depends
+ *
  */
 function _wordHits(data) {
-
   // Convert contractions to standard lexicon (I’m, you’re) to (I am, you are)
   const lexedContent = aposToLexForm(data);
 
@@ -151,7 +145,7 @@ function _wordHits(data) {
   const casedContent = lexedContent.toLowerCase();
 
   // Remove non-alphabetical and special characters
-  const alphaOnlyContent = casedContent.replace(/[^a-zA-Z\s]+/g, '');
+  const alphaOnlyContent = casedContent.replace(/[^a-zA-Z\s]+/g, "");
 
   // Tokenize words
   const { WordTokenizer } = natural;
@@ -179,7 +173,7 @@ function _wordHits(data) {
  * @returns {*}
  * @private
  * @depends     _removeTags _removeMisc
- * 
+ *
  *  TODO
  *  - Review REGEX to remove style tag content
  */
@@ -198,13 +192,13 @@ function _cleanData(data) {
  * @returns {*}
  * @private
  * @depends     _sortObject
- * @extrated from iccc_server by Sergio Rebelo    
- * 
- * 
+ * @extrated from iccc_server by Sergio Rebelo
+ *
+ *
  *  TODO
  *  - Review values returned and structure
  *  - Check how they can influence content
- *  - Possibilty to analise by sentende or line break 
+ *  - Possibilty to analise by sentende or line break
  *      different values???
  */
 function _wordNet(data) {
@@ -230,7 +224,7 @@ function _wordNet(data) {
     //token = nounInflector.singularize(token);
     //token = natural.PorterStemmer.stem(token);
 
-    const wn = wordnet.lookup(token, function (results) {
+    const wn = wordnet.lookup(token, function(results) {
       //TODO: understand if the lemmanisation is well done
       // results.forEach(function (result) {
       //   console.log(token, result.lemma, result.synsetOffset);
@@ -256,7 +250,6 @@ function _wordNet(data) {
     let currentEmo = 0;
     let currentEmoDescriptive = [];
     for (let wordOfLex of lexicon.emotions) {
-
       //JR: Direct macth to word in sentence
       if (sentence === wordOfLex.word) {
         currentEmo++;
@@ -277,9 +270,11 @@ function _wordNet(data) {
     for (let c of lexicon.colours) {
       if (sentence.includes(c.word)) {
         if (!Object.keys(colours).includes(c.colour) && c.colour !== "None") {
-          colours[c.colour] = parseInt(c.votes.votes) / parseInt(c.votes.totalcast);
+          colours[c.colour] =
+            parseInt(c.votes.votes) / parseInt(c.votes.totalcast);
         } else if (Object.keys(colours).includes(c.colour)) {
-          colours[c.colour] += parseInt(c.votes.votes) / parseInt(c.votes.totalcast);
+          colours[c.colour] +=
+            parseInt(c.votes.votes) / parseInt(c.votes.totalcast);
         }
       }
     }
@@ -302,7 +297,7 @@ const _sortObject = (obj, desc = true) => {
     sortable.push([item, obj[item]]);
   }
 
-  sortable.sort(function (a, b) {
+  sortable.sort(function(a, b) {
     return a[1] - b[1];
   });
 
@@ -311,17 +306,11 @@ const _sortObject = (obj, desc = true) => {
   }
 
   return sortable;
-
 };
 
-
-
-
 function _treatColorData(data) {
-
   let rawColours = data.colours;
   //console.log("rawColours: " + '\n' + JSON.stringify(rawColours) + '\n');
-
 
   let allColors = [];
   const analisedColors = [];
@@ -335,18 +324,22 @@ function _treatColorData(data) {
 
     //Change THIS FAST PLS :////////
     //LAZY FAT FUCK
-    if (rawColours[i][0] === "undefined") { } else {
+    if (rawColours[i][0] === "undefined") {
+    } else {
       allColors.push({
         color: _key,
         hits: _value
       });
     }
-
   }
 
   function compare(a, b) {
-    if (a.hits < b.hits) { return 1; }
-    if (a.hits > b.hits) { return -1; }
+    if (a.hits < b.hits) {
+      return 1;
+    }
+    if (a.hits > b.hits) {
+      return -1;
+    }
     return 0;
   }
   allColors.sort(compare);
@@ -364,15 +357,12 @@ function _treatColorData(data) {
   colours.allColours = allColors;
   colours.chosenColours = analisedColors;
 
-  return colours
-
+  return colours;
 }
 
 function _treatEmotionData(data) {
-
   let rawEmotions = data.emotionsDescriptive;
-  console.log("rawEmotions: " + '\n' + JSON.stringify(rawEmotions) + '\n');
-
+  console.log("rawEmotions: " + "\n" + JSON.stringify(rawEmotions) + "\n");
 
   let allEmotions = [];
   const analisedEmotions = [];
@@ -388,14 +378,14 @@ function _treatEmotionData(data) {
 
   let current = {};
   // Transform array to an object emotion + count
-  let reducer = function (count, emotion) {
+  let reducer = function(count, emotion) {
     if (!count[emotion]) {
       count[emotion] = 1;
     } else {
       count[emotion] = count[emotion] + 1;
     }
     return count;
-  }
+  };
   allEmotions.reduce(reducer, current);
 
   const currentEmotions = [];
@@ -410,50 +400,54 @@ function _treatEmotionData(data) {
     }
   }
 
-  console.log('\n' + "currentEmotions" + '\n' + JSON.stringify(currentEmotions));
+  console.log(
+    "\n" + "currentEmotions" + "\n" + JSON.stringify(currentEmotions)
+  );
 
   function compare(a, b) {
-    if (a.hits < b.hits) { return 1; }
-    if (a.hits > b.hits) { return -1; }
+    if (a.hits < b.hits) {
+      return 1;
+    }
+    if (a.hits > b.hits) {
+      return -1;
+    }
     return 0;
   }
   currentEmotions.sort(compare);
-
 
   let randomNumberOfEmotions = Math.floor(Math.random() * 5);
   for (let i = 0; i < randomNumberOfEmotions; i++) {
     _key = currentEmotions[i].emotion;
     analisedEmotions.push(_key);
   }
-  console.log("allEmotions: " + '\n' + JSON.stringify(allEmotions) + '\n');
-  console.log("analisedEmotions: " + '\n' + JSON.stringify(analisedEmotions) + '\n');
+  console.log("allEmotions: " + "\n" + JSON.stringify(allEmotions) + "\n");
+  console.log(
+    "analisedEmotions: " + "\n" + JSON.stringify(analisedEmotions) + "\n"
+  );
 
   let emotions = {};
   emotions.allEmotions = allEmotions;
   emotions.chosenEmotions = analisedEmotions;
 
-  return emotions
+  return emotions;
 }
 
-
-
-const _removeStyleAttr = (t) => {
-  return t.replace(/(<[^>]+) style=".*?"/g, "")
+const _removeStyleAttr = t => {
+  return t.replace(/(<[^>]+) style=".*?"/g, "");
 };
-const _removeTags = (t) => {
-  return t.replace(/<[^>]*>?/gm, '')
+const _removeTags = t => {
+  return t.replace(/<[^>]*>?/gm, "");
 };
-const _removeMisc = (t) => {
-  t = t.replace(/(\n)/g, '\n'); //
-  t = t.replace(/(\n)/g, ' '); //break lines to space
-  t = t.replace(/(^\n)|(\n$)|(\v)|(\t)/gm, ''); //tabs, idents, breaks at start and end
-  t = t.replace(/(\s\s+)|(^\s)|(\s$)/g, ''); //double whitespaces
+const _removeMisc = t => {
+  t = t.replace(/(\n)/g, "\n"); //
+  t = t.replace(/(\n)/g, " "); //break lines to space
+  t = t.replace(/(^\n)|(\n$)|(\v)|(\t)/gm, ""); //tabs, idents, breaks at start and end
+  t = t.replace(/(\s\s+)|(^\s)|(\s$)/g, ""); //double whitespaces
   return t;
-}
+};
 
-
-app.listen(9000, function () {
-  console.log('API listening on port 9000!');
+app.listen(9000, function() {
+  console.log("API listening on port 9000!");
 });
 
 module.exports = app;
