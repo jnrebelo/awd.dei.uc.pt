@@ -177,6 +177,7 @@ const submitReview = e => {
   };
 
   try {
+    //const f = fetch("http://localhost:9000/post", options)
     const f = fetch("http://awd4.dei.uc.pt/post", options)
       .then(function(res) {
         return res.json();
@@ -185,11 +186,12 @@ const submitReview = e => {
         //console.log(title);
         console.log(res);
 
-        if (disambiguation === true) {
-          disambiguationStyle(res);
-        }
         if (disambiguation === false) {
           getJsonStyles(res);
+        }
+
+        if (disambiguation === true) {
+          disambiguationStyle(res);
         }
 
         //
