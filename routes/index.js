@@ -19,6 +19,13 @@ app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
+app.options("*", cors());
+
+var corsOptions = {
+  origin: "http://awd4.dei.uc.pt",
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
 // app.get('/get/:anything', function (req, res) {
 //   var hw = {};
 //   hw.res = "hello words";
@@ -26,11 +33,11 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 //   res.send(hw);
 // });
 
-app.get("/", function(req, res) {
+app.get("/", cors(), function(req, res) {
   res.send("API listening");
 });
 
-app.post("/post", function(req, res) {
+app.post("/post", cors(), function(req, res) {
   //let store_WordHits = [];
 
   const content = req.body.content;

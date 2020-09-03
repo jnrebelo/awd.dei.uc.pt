@@ -192,7 +192,7 @@ const submitReview = e => {
     const url = "http://awd4.dei.uc.pt/post"; // site that doesn’t send Access-Control-*
 
     //const f = fetch("http://localhost:9000/post", options)
-    const f = fetch(proxyurl + url, options)
+    const f = fetch(url, options)
       .then(function(res) {
         return res.json();
       })
