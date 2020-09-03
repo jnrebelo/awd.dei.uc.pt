@@ -188,8 +188,7 @@ const submitReview = e => {
   };
 
   try {
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const url = "http://awd4.dei.uc.pt/post"; // site that doesn’t send Access-Control-*
+    const url = "http://awd4.dei.uc.pt/post";
 
     //const f = fetch("http://localhost:9000/post", options)
     const f = fetch(url, options)
