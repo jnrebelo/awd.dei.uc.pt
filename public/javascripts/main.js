@@ -185,9 +185,9 @@ const submitReview = e => {
     cache: "no-cache",
     headers: new Headers({
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      'Accept': 'application/json',
-      "Access-Control-Allow-Methods": "GET, POST, PUT"
+      // "Access-Control-Allow-Origin": "*",
+      // 'Accept': 'application/json',
+      // "Access-Control-Allow-Methods": "GET, POST, PUT"
     }),
     body: JSON.stringify(data, null, 2)
   };
