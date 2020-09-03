@@ -20,11 +20,6 @@ app.options("*", cors());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
-var corsOptions = {
-  origin: "http://awd4.dei.uc.pt",
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
 // app.get('/get/:anything', function (req, res) {
 //   var hw = {};
 //   hw.res = "hello words";
@@ -33,11 +28,10 @@ var corsOptions = {
 // });
 
 app.use(function(req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST");
-  res.setHeader(
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
     "Access-Control-Allow-Headers",
-    "X-Requested-With,content-type, Authorization"
+    "Origin, X-Requested-With, Content-Type, Accept"
   );
   next();
 });
