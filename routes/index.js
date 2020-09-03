@@ -14,8 +14,8 @@ const sentiment = new SentimentAnalyzer({ language: "en" });
 const cors = require("cors");
 const app = express();
 
-// app.use(cors());
-// app.options("*", cors());
+app.use(cors());
+app.options("*", cors());
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
