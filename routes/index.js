@@ -14,8 +14,8 @@ const sentiment = new SentimentAnalyzer({ language: "en" });
 const cors = require("cors");
 const app = express();
 
-app.use(cors());
-app.options("*", cors());
+// app.use(cors());
+// app.options("*", cors());
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
@@ -36,11 +36,11 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get("/", cors(), function(req, res) {
+app.get("/", function(req, res) {
   res.send("API listening");
 });
 
-app.post("/post", cors(), function(req, res) {
+app.post("/post", function(req, res) {
   //let store_WordHits = [];
 
   const content = req.body.content;
