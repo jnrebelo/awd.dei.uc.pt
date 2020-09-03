@@ -8,14 +8,15 @@ var usersRouter = require("./routes/users");
 
 var app = express();
 
-const cors = require("cors");
-app.use(cors());
-app.options("*", cors());
+// const cors = require("cors");
+
+// app.use(cors());
+// app.options("*", cors());
 
 // Add headers
 app.use(function(req, res, next) {
   // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "http://awd3.dei.uc.pt");
 
   // Request methods you wish to allow
   res.setHeader(
