@@ -183,7 +183,10 @@ const submitReview = e => {
     method: "POST",
     mode: "cors",
     cache: "no-cache",
-    headers: new Headers({ "Content-Type": "application/json" }),
+    headers: new Headers({
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    }),
     body: JSON.stringify(data, null, 2)
   };
 
