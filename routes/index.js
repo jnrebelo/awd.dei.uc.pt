@@ -15,11 +15,10 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
+app.options("*", cors());
 
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
-
-app.options("*", cors());
 
 var corsOptions = {
   origin: "http://awd4.dei.uc.pt",
@@ -32,6 +31,16 @@ var corsOptions = {
 //   hw.param = req.params.anything;
 //   res.send(hw);
 // });
+
+app.use(function(req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type, Authorization"
+  );
+  next();
+});
 
 app.get("/", cors(), function(req, res) {
   res.send("API listening");
