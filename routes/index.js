@@ -27,11 +27,17 @@ app.use(express.urlencoded({ extended: true, limit: "100mb" }));
 //   res.send(hw);
 // });
 
-app.get("/", function(req, res) {
+app.all("/", function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
+
+app.get("/", function(req, res, next) {
   res.send("API listening");
 });
 
-app.post("/post", function(req, res) {
+app.post("/post", function(req, res, next) {
   //let store_WordHits = [];
 
   const content = req.body.content;
