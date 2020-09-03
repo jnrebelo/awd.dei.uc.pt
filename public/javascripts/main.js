@@ -35,6 +35,17 @@ function headerSizeHandler() {
   }, 400);
 }
 
+$(document).ready(function() {
+  $("#btn").attr("disabled", true);
+  $("#text1").keyup(function() {
+    if ($(this).val().length != 0) $("#btn").attr("disabled", false);
+    else $("#btn").attr("disabled", true);
+  });
+});
+$("#btn").on("click", function() {
+  $("#btn_analize").attr("disabled", false);
+});
+
 $("#b_info").on("click", function() {
   $(".info_section").toggleClass("heightShow");
   $(this).toggleClass("btn--active");
@@ -177,8 +188,11 @@ const submitReview = e => {
   };
 
   try {
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const url = "http://awd4.dei.uc.pt/post"; // site that doesn’t send Access-Control-*
+
     //const f = fetch("http://localhost:9000/post", options)
-    const f = fetch("http://awd4.dei.uc.pt/post", options)
+    const f = fetch(proxyurl + url, options)
       .then(function(res) {
         return res.json();
       })
@@ -189,7 +203,6 @@ const submitReview = e => {
         if (disambiguation === false) {
           getJsonStyles(res);
         }
-
         if (disambiguation === true) {
           disambiguationStyle(res);
         }
@@ -206,6 +219,10 @@ const submitReview = e => {
 };
 $("#btn_analize").click(submitReview);
 //document.getElementById('btn_analize').addEventListener('click', submitReview);
+$("#btn_analize").on("click", function() {
+  $(this).text("Analizing");
+  $(this).toggleClass("btn--active");
+});
 
 function desambig() {
   var title = jQuery(".results a").attr("title");
