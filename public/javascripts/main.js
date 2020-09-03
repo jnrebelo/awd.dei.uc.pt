@@ -181,7 +181,7 @@ const submitReview = e => {
 
   const options = {
     method: "POST",
-    mode: "cors",
+    mode: "no-cors",
     cache: "no-cache",
     headers: new Headers({ "Content-Type": "application/json" }),
     body: JSON.stringify(data, null, 2)
