@@ -20,12 +20,7 @@ app.options("*", cors());
 app.use(express.json({ limit: "100mb" }));
 app.use(express.urlencoded({ extended: true, limit: "100mb" }));
 
-// app.get('/get/:anything', function (req, res) {
-//   var hw = {};
-//   hw.res = "hello words";
-//   hw.param = req.params.anything;
-//   res.send(hw);
-// });
+
 
 app.all("/", function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");

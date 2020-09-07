@@ -184,7 +184,7 @@ const submitReview = e => {
     mode: "cors",
     cache: "no-cache",
     headers: new Headers({
-      "Content-Type": "application/json",
+      "Content-Type": "application/json"
       // "Access-Control-Allow-Origin": "*",
       // 'Accept': 'application/json',
       // "Access-Control-Allow-Methods": "GET, POST, PUT"
@@ -193,10 +193,9 @@ const submitReview = e => {
   };
 
   try {
-    const url = "http://awd4.dei.uc.pt/post";
-
-    //const f = fetch("http://localhost:9000/post", options)
-    const f = fetch(url, options)
+    //const url = "http://awd4.dei.uc.pt/post";
+    //const f = fetch(url, options)
+    const f = fetch("http://localhost:9000/post", options)
       .then(function(res) {
         return res.json();
       })
@@ -1311,17 +1310,6 @@ function getJsonStyles(res) {
   _setPageStructure();
   _getBgColor();
 
-  /**
-   * Assign all css Variables
-   *
-   * let h2 = document.getElementsByTagName("h2");
-   * let p = document.getElementsByTagName("p");
-   *
-   * let stored_css = {};
-   * document.body.style.cssText = { `${stored_css.body}` }
-   * document.h2.style.cssText = { `${stored_css.h2}` }
-   * document.p.style.cssText = { `${stored_css.p}` }
-   */
 }
 
 function disambiguationStyle(res) {

@@ -201,6 +201,11 @@ body {
   width: 100%;
   text-align: center;
 }
+.gallery_section .images_wrap img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
 
 .gallery_section ul {
   list-style-type: none;
